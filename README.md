@@ -1,4 +1,3 @@
-Tweepy Writer
+Explore the Twitter API
 ====
 
-A simple streaming writer from Twitter's API.
