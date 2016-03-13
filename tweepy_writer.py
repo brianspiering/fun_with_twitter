@@ -15,6 +15,8 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
+limit = 2 # Number of tweets to save
+
 # Load credentials from ~/.credentials.json
 creds = credentials.require(['access_token', 
                              'access_token_secret', 
@@ -61,7 +63,7 @@ if __name__ == '__main__':
     #     pass
 
     listener = WriteToDiskListener(filename=filename, 
-                                    limit=5)
+                                    limit=limit)
     stream = Stream(auth, listener)
 
     try:
